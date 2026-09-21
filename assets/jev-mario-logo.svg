@@ -1,10 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
-  <title id="title">Jev Mario</title><desc id="desc">A pixel-inspired red cap and blue controller mark.</desc>
-  <rect width="720" height="180" rx="28" fill="#101827"/>
-  <path d="M54 112V74c0-25 20-45 45-45h88c25 0 45 20 45 45v38h-35V82c0-10-8-18-18-18h-72c-10 0-18 8-18 18v30H54Z" fill="#ef4444"/>
-  <path d="M69 76h148c-8 16-25 27-44 27H113c-19 0-36-11-44-27Z" fill="#f87171"/>
-  <circle cx="125" cy="91" r="7" fill="#fff"/><circle cx="162" cy="91" r="7" fill="#fff"/>
-  <path d="M293 67h104c19 0 34 15 34 34v10c0 19-15 34-34 34H293c-19 0-34-15-34-34v-10c0-19 15-34 34-34Z" fill="#38bdf8"/>
-  <path d="M282 98h25m-12-12v25M370 91h8m-4-4v8m28-4h8" stroke="#101827" stroke-width="7" stroke-linecap="round"/>
-  <text x="455" y="116" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="700" fill="#f8fafc">Jev Mario</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Jev Mario repository icon</title>
+  <desc id="desc">A polished pixel inspired J monogram with a red cap and blue controller.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18233b"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff5a62"/><stop offset="1" stop-color="#c92d4b"/></linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55d6ff"/><stop offset="1" stop-color="#2787d9"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#020617" flood-opacity=".45"/></filter>
+  </defs>
+  <rect x="12" y="12" width="488" height="488" rx="112" fill="url(#bg)"/>
+  <path d="M62 390h388M62 430h260" stroke="#334155" stroke-width="3" opacity=".45"/>
+  <g filter="url(#shadow)">
+    <path d="M102 207v-40c0-55 45-100 100-100h101c55 0 100 45 100 100v40h-73v-35c0-15-12-27-27-27H202c-15 0-27 12-27 27v35Z" fill="url(#cap)"/>
+    <path d="M82 201h325c-20 35-57 56-98 56H180c-41 0-78-21-98-56Z" fill="#f04459"/>
+    <path d="M126 176c33 12 70 18 111 18 43 0 84-6 123-20" fill="none" stroke="#ff7a7f" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+    <path d="M238 83h47c10 0 18 8 18 18v45h-83v-45c0-10 8-18 18-18Z" fill="#fff" opacity=".95"/>
+    <text x="244" y="133" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="900" fill="#d92f4b">J</text>
+    <path d="M116 307c0-29 24-53 53-53h174c29 0 53 24 53 53v25c0 29-24 53-53 53H169c-29 0-53-24-53-53Z" fill="url(#pad)"/>
+    <path d="M145 316h43m-21-21v43" stroke="#0b2442" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="329" cy="313" r="12" fill="#0b2442"/><circle cx="364" cy="337" r="12" fill="#0b2442"/>
+    <circle cx="258" cy="329" r="9" fill="#dff7ff" opacity=".8"/>
+  </g>
+  <circle cx="424" cy="92" r="13" fill="#fbbf24"/><circle cx="424" cy="92" r="5" fill="#fff7cc"/>
 </svg>

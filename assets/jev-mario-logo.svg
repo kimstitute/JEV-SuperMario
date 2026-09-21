@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+  <title id="title">Jev Mario</title><desc id="desc">A pixel-inspired red cap and blue controller mark.</desc>
+  <rect width="720" height="180" rx="28" fill="#101827"/>
+  <path d="M54 112V74c0-25 20-45 45-45h88c25 0 45 20 45 45v38h-35V82c0-10-8-18-18-18h-72c-10 0-18 8-18 18v30H54Z" fill="#ef4444"/>
+  <path d="M69 76h148c-8 16-25 27-44 27H113c-19 0-36-11-44-27Z" fill="#f87171"/>
+  <circle cx="125" cy="91" r="7" fill="#fff"/><circle cx="162" cy="91" r="7" fill="#fff"/>
+  <path d="M293 67h104c19 0 34 15 34 34v10c0 19-15 34-34 34H293c-19 0-34-15-34-34v-10c0-19 15-34 34-34Z" fill="#38bdf8"/>
+  <path d="M282 98h25m-12-12v25M370 91h8m-4-4v8m28-4h8" stroke="#101827" stroke-width="7" stroke-linecap="round"/>
+  <text x="455" y="116" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="700" fill="#f8fafc">Jev Mario</text>
+</svg>

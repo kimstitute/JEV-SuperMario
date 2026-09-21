@@ -1,0 +1,7 @@
+gym-super-mario-bros==9.1.0
+nes-py==9.0.1
+pillow>=11,<13
+opencv-python-headless==5.0.0.93
+python-dotenv>=1,<2
+httpx>=0.28,<1
+pytest>=8,<10

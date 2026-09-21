@@ -1,0 +1,584 @@
+{
+  "goal": "Finish Super Mario Bros 1-1, avoiding death.",
+  "action_frames": 2,
+  "coordinates": "Pixels. Screen x right, y down. Object dx/dy relative to Mario feet center in the SAME observation. Width/height are extents from object top-left.",
+  "rules": {
+    "version": "rgb-analysis-v1",
+    "normal_jump_clearance_frames": 8,
+    "low_ceiling_threshold_px": 40,
+    "minimum_hop_headroom_px": 18,
+    "low_ceiling_hop_edge_gap_px": [
+      12,
+      32
+    ],
+    "obstacle_approach_px": 48,
+    "pit_approach_px": 48,
+    "notes": "Approximate heuristics for small Mario in SMB1. Timing uses current velocity, not a simulated trajectory. Unknown geometry is not empty. API wait advances zero game frames."
+  },
+  "observation": {
+    "frame": 467,
+    "mario": {
+      "world_x": 1069,
+      "screen_x": 127,
+      "feet_y": 208,
+      "screen_box": [
+        127,
+        192,
+        16,
+        16
+      ],
+      "form": "small",
+      "vx": 3.0,
+      "vy": 0.0,
+      "grounded": true,
+      "held_buttons": [
+        "right",
+        "B"
+      ],
+      "frame": 467
+    },
+    "camera": {
+      "world_x_offset": 942,
+      "delta_x": 3,
+      "source": "Mario world_x minus screen_x"
+    }
+  },
+  "analysis": {
+    "motion": {
+      "phase": "grounded",
+      "vx_px_per_frame": 3.0,
+      "vy_px_per_frame": 0.0,
+      "a_held": false,
+      "can_start_jump": true,
+      "must_release_a_before_next_jump": false
+    },
+    "enemies": [],
+    "nearest_forward_enemy": null,
+    "terrain": {
+      "nearest_obstacle": null,
+      "nearest_confirmed_gap": {
+        "dx_start": 30,
+        "dx_end": 62,
+        "surface_dy": 0,
+        "kind": "visually_confirmed_floor_opening",
+        "evidence": "clear sky to bottom, observed ground at both edges",
+        "edge_gap_px": 22.0,
+        "visible_width_px": 32
+      },
+      "support_below": {
+        "dx_start": -18.0,
+        "dx_end": 30.0,
+        "top_dy": 0.0,
+        "source": "observed"
+      },
+      "landing_surfaces": [
+        {
+          "dx_start": -135.0,
+          "dx_end": -130.0,
+          "top_dy": -64.0,
+          "source": "remembered"
+        },
+        {
+          "dx_start": -130.0,
+          "dx_end": -19.0,
+          "top_dy": 0.0,
+          "source": "observed"
+        },
+        {
+          "dx_start": -18.0,
+          "dx_end": 30.0,
+          "top_dy": 0.0,
+          "source": "observed"
+        },
+        {
+          "dx_start": 62.0,
+          "dx_end": 121.0,
+          "top_dy": 0.0,
+          "source": "observed"
+        }
+      ],
+      "headroom_now_px": null,
+      "headroom_before_enemy_px": null,
+      "low_ceiling_before_enemy": false,
+      "ceilings": []
+    },
+    "rule_signals": {
+      "enemy_takeoff_window": "not_applicable",
+      "enemy_window_rule": "constant_speed_contact_minus_clearance",
+      "obstacle_within_approach_range": false,
+      "confirmed_gap_within_approach_range": true,
+      "contact_within_next_action": false
+    },
+    "uncertainty": {
+      "unknown_cells": 54,
+      "occluded_cells": 12,
+      "remembered_terrain_cells": 52,
+      "no_detected_enemy_does_not_mean_safe": true,
+      "no_detected_ceiling_does_not_mean_unlimited_headroom": true
+    },
+    "support_loss": {
+      "cause": "visually_confirmed_floor_opening",
+      "near_edge_from_feet_center_px": 30,
+      "front_edge_distance_px": 22.0,
+      "frames_until_feet_center_over_gap_at_current_speed": 10.0,
+      "possible_support_loss_frames_at_current_speed": [
+        6.67,
+        13.33
+      ],
+      "gap_width_px": 32,
+      "minimum_forward_travel_to_overlap_far_bank_px": 54.0,
+      "forward_travel_to_center_over_far_bank_px": 62,
+      "far_bank_height_relative_to_feet_px": 0,
+      "next_decision_can_be_too_late": false,
+      "assumption": "Continued rightward speed without a jump; collision-foot location is uncertain."
+    },
+    "recent_completed_jumps": [
+      {
+        "start_vx": 0.0,
+        "initial_A_hold_frames": 24,
+        "observed_rise_px": 64,
+        "observed_forward_travel_px": 39,
+        "note": "Sampled completed jump; ceiling/contact and differing speed can affect the result."
+      },
+      {
+        "start_vx": 0.0,
+        "initial_A_hold_frames": 24,
+        "observed_rise_px": 64,
+        "observed_forward_travel_px": 17,
+        "note": "Sampled completed jump; ceiling/contact and differing speed can affect the result."
+      },
+      {
+        "start_vx": 3.0,
+        "initial_A_hold_frames": 30,
+        "observed_rise_px": 86,
+        "observed_forward_travel_px": 150,
+        "note": "Sampled completed jump; ceiling/contact and differing speed can affect the result."
+      },
+      {
+        "start_vx": 0.0,
+        "initial_A_hold_frames": 24,
+        "observed_rise_px": 64,
+        "observed_forward_travel_px": 3,
+        "note": "Sampled completed jump; ceiling/contact and differing speed can affect the result."
+      }
+    ]
+  },
+  "history": [
+    {
+      "frame": 455,
+      "age_frames": 12,
+      "mario": {
+        "world_x": 1033,
+        "screen_x": 127,
+        "feet_y": 208,
+        "screen_box": [
+          127,
+          192,
+          16,
+          16
+        ],
+        "form": "small",
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true,
+        "held_buttons": [
+          "right",
+          "B"
+        ],
+        "frame": 455
+      },
+      "nearest_enemy": null,
+      "jump_phase": "grounded",
+      "headroom_px": null
+    },
+    {
+      "frame": 459,
+      "age_frames": 8,
+      "mario": {
+        "world_x": 1045,
+        "screen_x": 127,
+        "feet_y": 208,
+        "screen_box": [
+          127,
+          192,
+          16,
+          16
+        ],
+        "form": "small",
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true,
+        "held_buttons": [
+          "right",
+          "B"
+        ],
+        "frame": 459
+      },
+      "nearest_enemy": null,
+      "jump_phase": "grounded",
+      "headroom_px": null
+    },
+    {
+      "frame": 463,
+      "age_frames": 4,
+      "mario": {
+        "world_x": 1057,
+        "screen_x": 127,
+        "feet_y": 208,
+        "screen_box": [
+          127,
+          192,
+          16,
+          16
+        ],
+        "form": "small",
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true,
+        "held_buttons": [
+          "right",
+          "B"
+        ],
+        "frame": 463
+      },
+      "nearest_enemy": null,
+      "jump_phase": "grounded",
+      "headroom_px": null
+    },
+    {
+      "frame": 467,
+      "age_frames": 0,
+      "mario": {
+        "world_x": 1069,
+        "screen_x": 127,
+        "feet_y": 208,
+        "screen_box": [
+          127,
+          192,
+          16,
+          16
+        ],
+        "form": "small",
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true,
+        "held_buttons": [
+          "right",
+          "B"
+        ],
+        "frame": 467
+      },
+      "nearest_enemy": null,
+      "jump_phase": "grounded",
+      "headroom_px": null
+    }
+  ],
+  "recent_controls": [
+    {
+      "frame": 443,
+      "buttons": "RIGHT_B",
+      "executed_frames": 6,
+      "progress_px": 18,
+      "before": {
+        "world_x": 997,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 1.0,
+        "grounded": true
+      },
+      "after": {
+        "world_x": 1015,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      }
+    },
+    {
+      "frame": 449,
+      "buttons": "RIGHT_B",
+      "executed_frames": 6,
+      "progress_px": 18,
+      "before": {
+        "world_x": 1015,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      },
+      "after": {
+        "world_x": 1033,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      }
+    },
+    {
+      "frame": 455,
+      "buttons": "RIGHT_B",
+      "executed_frames": 6,
+      "progress_px": 18,
+      "before": {
+        "world_x": 1033,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      },
+      "after": {
+        "world_x": 1051,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      }
+    },
+    {
+      "frame": 461,
+      "buttons": "RIGHT_B",
+      "executed_frames": 6,
+      "progress_px": 18,
+      "before": {
+        "world_x": 1051,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      },
+      "after": {
+        "world_x": 1069,
+        "feet_y": 208,
+        "vx": 3.0,
+        "vy": 0.0,
+        "grounded": true
+      }
+    }
+  ],
+  "recent_terrain_changes": [],
+  "observation_format": "RGB-derived object analysis and candidate consequences. Original detections are retained in local raw_observations. No other AI or enemy/map RAM.",
+  "forecast_rules": {
+    "version": "candidate-v2",
+    "position_margin_px": 2,
+    "acceleration_px_per_frame2": {
+      "right": [
+        0.04,
+        0.16
+      ],
+      "left": [
+        0.08,
+        0.3
+      ],
+      "coast": [
+        0.025,
+        0.125
+      ]
+    },
+    "run_speed_px_per_frame": 3.0,
+    "walk_speed_px_per_frame": 1.5,
+    "assumptions": "Initial uncalibrated horizontal bounds, not confidence intervals. No engine rollout, hidden geometry or invented vertical trajectory. Forecasts ignore collisions and are conditional on the measured motion. Sprite edges differ from collision feet; support-loss time is a range. No detected surface or ceiling means unknown, not clear space."
+  },
+  "decision_schedule": {
+    "maximum_frames": 6,
+    "execute_frames": 2,
+    "reasons": [
+      "approaching confirmed support loss"
+    ],
+    "early_recheck_on_landing": true
+  },
+  "candidates": {
+    "NOOP": {
+      "buttons": [],
+      "meaning": "Release all buttons. Momentum and gravity continue. A stays released; gravity and existing motion continue.",
+      "jump_effect": "release",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        5.62,
+        5.93
+      ],
+      "acceleration_bounds": [
+        0.025,
+        0.125
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": null,
+      "support_consequence": "feet_center_stays_before_gap_edge_this_interval",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": null
+    },
+    "RIGHT": {
+      "buttons": [
+        "right"
+      ],
+      "meaning": "Hold right; release A and B. A stays released; gravity and existing motion continue.",
+      "jump_effect": "release",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        5.52,
+        5.88
+      ],
+      "acceleration_bounds": [
+        0.04,
+        0.16
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": null,
+      "support_consequence": "feet_center_stays_before_gap_edge_this_interval",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": null
+    },
+    "RIGHT_A": {
+      "buttons": [
+        "right",
+        "A"
+      ],
+      "meaning": "Hold right and jump button A; release B. Starts a jump. A may need to stay held through later decisions to attain enough height.",
+      "jump_effect": "start",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        5.52,
+        5.88
+      ],
+      "acceleration_bounds": [
+        0.04,
+        0.16
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": null,
+      "support_consequence": "jump_initiated_support_transfers_to_air",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": false
+    },
+    "RIGHT_B": {
+      "buttons": [
+        "right",
+        "B"
+      ],
+      "meaning": "Hold right and run button B; release A. A stays released; gravity and existing motion continue.",
+      "jump_effect": "release",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        6.0,
+        6.0
+      ],
+      "acceleration_bounds": [
+        0.04,
+        0.16666666666666666
+      ],
+      "recent_acceleration_samples": 1,
+      "approximate_braking_distance_px_range": null,
+      "support_consequence": "feet_center_stays_before_gap_edge_this_interval",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": null
+    },
+    "RIGHT_A_B": {
+      "buttons": [
+        "right",
+        "A",
+        "B"
+      ],
+      "meaning": "Hold right, jump A, and run B together. Starts a jump. A may need to stay held through later decisions to attain enough height.",
+      "jump_effect": "start",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        6.0,
+        6.0
+      ],
+      "acceleration_bounds": [
+        0.04,
+        0.16
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": null,
+      "support_consequence": "jump_initiated_support_transfers_to_air",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": false
+    },
+    "A": {
+      "buttons": [
+        "A"
+      ],
+      "meaning": "Hold jump A; release directions and B. Starts a jump. A may need to stay held through later decisions to attain enough height.",
+      "jump_effect": "start",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        5.62,
+        5.93
+      ],
+      "acceleration_bounds": [
+        0.025,
+        0.125
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": null,
+      "support_consequence": "jump_initiated_support_transfers_to_air",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": false
+    },
+    "LEFT": {
+      "buttons": [
+        "left"
+      ],
+      "meaning": "Hold left; release A and B. This can decelerate rightward movement. A stays released; gravity and existing motion continue.",
+      "jump_effect": "release",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        5.1,
+        5.76
+      ],
+      "acceleration_bounds": [
+        0.08,
+        0.3
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": [
+        15.0,
+        56.25
+      ],
+      "support_consequence": "feet_center_stays_before_gap_edge_this_interval",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": null
+    },
+    "LEFT_A": {
+      "buttons": [
+        "left",
+        "A"
+      ],
+      "meaning": "Hold left and A; release B. Starts a jump. A may need to stay held through later decisions to attain enough height.",
+      "jump_effect": "start",
+      "execute_frames": 2,
+      "free_space_horizontal_travel_px_range": [
+        5.1,
+        5.76
+      ],
+      "acceleration_bounds": [
+        0.08,
+        0.3
+      ],
+      "recent_acceleration_samples": 0,
+      "approximate_braking_distance_px_range": [
+        15.0,
+        56.25
+      ],
+      "support_consequence": "jump_initiated_support_transfers_to_air",
+      "headroom_now_px": null,
+      "remaining_rise_to_clear_nearest_obstacle_px": null,
+      "jump_reach": "Not predicted. Use required distance, landing height and observed outcomes; starting a jump does not guarantee crossing.",
+      "ceiling_contact_possible": false
+    }
+  }
+}

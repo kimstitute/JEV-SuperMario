@@ -1,0 +1,76 @@
+{
+  "version": "rule-prompt-cases-v1",
+  "purpose": "Preselected real observations. Diagnostics are reviewed separately; no automatic claim of action correctness.",
+  "cases": [
+    {
+      "id": "clear_ground",
+      "run": "runs/20260920-151250-jev",
+      "frame": 0,
+      "frozen_state": "experiments/fixtures/clear_ground.json",
+      "base_state_sha256": "9c7e58f92377405a44c51f69fedfd10e1d16a03a8b9d56bceb0b32d80780878e"
+    },
+    {
+      "id": "enemy_low_ceiling",
+      "run": "runs/20260920-151250-jev",
+      "frame": 90,
+      "frozen_state": "experiments/fixtures/enemy_low_ceiling.json",
+      "base_state_sha256": "29c8dd69bc4f96c1276a1f6b05a04816f21c5b0202e6c513d5ecd348e1cf2c49"
+    },
+    {
+      "id": "pipe_approach",
+      "run": "runs/20260920-153408-jev",
+      "frame": 226,
+      "frozen_state": "experiments/fixtures/pipe_approach.json",
+      "base_state_sha256": "cb68104def1549fa5484b5950100d1e07a946065d72fb146681f2628bd9025b7"
+    },
+    {
+      "id": "pipe_rising_A_held",
+      "run": "runs/20260920-153408-jev",
+      "frame": 228,
+      "frozen_state": "experiments/fixtures/pipe_rising_A_held.json",
+      "base_state_sha256": "a811d87947e3983ce4e99488b752f553627ffc504980f5c66f5a9449322f23cf"
+    },
+    {
+      "id": "pipe_A_already_released",
+      "run": "runs/20260920-153408-jev",
+      "frame": 230,
+      "frozen_state": "experiments/fixtures/pipe_A_already_released.json",
+      "base_state_sha256": "c69daeb58b651523d1b2f721eff4ee215249fdaff544f889b9ee6e137f4fd700"
+    },
+    {
+      "id": "gap_approach",
+      "run": "runs/20260920-151250-jev",
+      "frame": 461,
+      "frozen_state": "experiments/fixtures/gap_approach.json",
+      "base_state_sha256": "95b1b524d9ba6be1c09959c2094a195fade8cd23a353de462b14a990301f9078"
+    },
+    {
+      "id": "gap_close",
+      "run": "runs/20260920-151250-jev",
+      "frame": 467,
+      "frozen_state": "experiments/fixtures/gap_close.json",
+      "base_state_sha256": "236ef5f4887c65a36579a0a05d809ba729cd3353e3aad6e7b862418cd62c5cdf"
+    },
+    {
+      "id": "gap_last_moments",
+      "run": "runs/20260920-151250-jev",
+      "frame": 473,
+      "frozen_state": "experiments/fixtures/gap_last_moments.json",
+      "base_state_sha256": "9c3d2b9647e4ab5779d0cf1ddf04670b2080a04371e4ddb60078f6972d4e1c60"
+    },
+    {
+      "id": "gap_descending",
+      "run": "runs/20260920-164440-matched-probe",
+      "frame": 497,
+      "frozen_state": "experiments/fixtures/gap_descending.json",
+      "base_state_sha256": "a5404d34890a0f48ae57ba17abbafcd6800c8075d2ce90679d692832143f2b6d"
+    },
+    {
+      "id": "after_gap_landing",
+      "run": "runs/20260920-164440-matched-probe",
+      "frame": 511,
+      "frozen_state": "experiments/fixtures/after_gap_landing.json",
+      "base_state_sha256": "061533f59d9559762b0d342d2f9a34aec0e0554b604c312a8b85e793166d4680"
+    }
+  ]
+}

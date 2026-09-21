@@ -1,24 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">Jev Mario repository icon</title>
-  <desc id="desc">A polished pixel inspired J monogram with a red cap and blue controller.</desc>
+  <title id="title">Jev Mario</title>
+  <desc id="desc">A transparent square icon combining a J monogram, a red cap, and a blue game controller.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18233b"/><stop offset="1" stop-color="#0b1020"/></linearGradient>
-    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ff5a62"/><stop offset="1" stop-color="#c92d4b"/></linearGradient>
-    <linearGradient id="pad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55d6ff"/><stop offset="1" stop-color="#2787d9"/></linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#020617" flood-opacity=".45"/></filter>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#ff625f"/><stop offset="1" stop-color="#d62443"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#55dcff"/><stop offset="1" stop-color="#2384df"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#07101f" flood-opacity=".28"/>
+    </filter>
   </defs>
-  <rect x="12" y="12" width="488" height="488" rx="112" fill="url(#bg)"/>
-  <path d="M62 390h388M62 430h260" stroke="#334155" stroke-width="3" opacity=".45"/>
+
+  <!-- The canvas is intentionally transparent. All artwork stays inside a square icon footprint. -->
   <g filter="url(#shadow)">
-    <path d="M102 207v-40c0-55 45-100 100-100h101c55 0 100 45 100 100v40h-73v-35c0-15-12-27-27-27H202c-15 0-27 12-27 27v35Z" fill="url(#cap)"/>
-    <path d="M82 201h325c-20 35-57 56-98 56H180c-41 0-78-21-98-56Z" fill="#f04459"/>
-    <path d="M126 176c33 12 70 18 111 18 43 0 84-6 123-20" fill="none" stroke="#ff7a7f" stroke-width="8" stroke-linecap="round" opacity=".7"/>
-    <path d="M238 83h47c10 0 18 8 18 18v45h-83v-45c0-10 8-18 18-18Z" fill="#fff" opacity=".95"/>
-    <text x="244" y="133" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="900" fill="#d92f4b">J</text>
-    <path d="M116 307c0-29 24-53 53-53h174c29 0 53 24 53 53v25c0 29-24 53-53 53H169c-29 0-53-24-53-53Z" fill="url(#pad)"/>
-    <path d="M145 316h43m-21-21v43" stroke="#0b2442" stroke-width="13" stroke-linecap="round"/>
-    <circle cx="329" cy="313" r="12" fill="#0b2442"/><circle cx="364" cy="337" r="12" fill="#0b2442"/>
-    <circle cx="258" cy="329" r="9" fill="#dff7ff" opacity=".8"/>
+    <rect x="70" y="70" width="372" height="372" rx="88" fill="none" stroke="#172033" stroke-width="22"/>
+
+    <path d="M128 220v-29c0-58 47-105 105-105h46c58 0 105 47 105 105v29h-72v-25c0-19-15-34-34-34h-44c-19 0-34 15-34 34v25Z" fill="url(#cap)"/>
+    <path d="M111 211h290c-18 34-54 57-95 57H206c-41 0-77-23-95-57Z" fill="#f04455"/>
+    <path d="M155 188c62 17 133 17 202-2" fill="none" stroke="#ff8580" stroke-width="9" stroke-linecap="round" opacity=".7"/>
+
+    <rect x="221" y="103" width="70" height="70" rx="20" fill="#fff"/>
+    <path d="M270 119v22c0 15-8 23-24 23-8 0-15-3-20-8l10-13c3 3 6 5 10 5 5 0 7-3 7-9v-20Z" fill="#d92543"/>
+
+    <path d="M126 304c0-31 25-56 56-56h148c31 0 56 25 56 56v43c0 31-25 56-56 56H182c-31 0-56-25-56-56Z" fill="url(#pad)"/>
+    <path d="M158 324h50m-25-25v50" stroke="#122039" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="320" cy="315" r="13" fill="#122039"/>
+    <circle cx="350" cy="344" r="13" fill="#122039"/>
+    <path d="M240 338h32" stroke="#dff8ff" stroke-width="11" stroke-linecap="round" opacity=".9"/>
   </g>
-  <circle cx="424" cy="92" r="13" fill="#fbbf24"/><circle cx="424" cy="92" r="5" fill="#fff7cc"/>
 </svg>
